@@ -7,7 +7,7 @@
 
 /*Neutral*/
 
---Grayish-blue: hsl(240, 2%, 79%);
+--Grayish-blue: hsl(240, 5%, 88%);
 --Very-dark-grayish-blue: hsl(207, 13%, 34%);
 --Very-dark-blue2: hsl(240, 10%, 16%);
 
@@ -41,7 +41,7 @@ body {
 }
 
 header {
-   width: 100vw;
+   width: 100%;
    height: 400px;
    background: linear-gradient(90deg, var(--Very-light-red2), var(--Light-red2));
    border-radius: 0px 0px 0px 80px;
@@ -62,60 +62,64 @@ header {
 
 .navbar {
     display: flex;
-    width: 90%;
-    justify-content: space-around;
+    width: 100vw;
+    padding: 10px;;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 10px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
 }
 
 .container-drop {
     position: relative;
     display: flex;
+    padding: 20px;
 }
 
-.container-drop > a {
+.container-drop.active .dropdown {
+    display: block;
+}
+
+.container-drop .catego {
     color: white;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
     height: 20px;
-    width: 85px;
+    width: 90px;
     text-decoration:none;
+    cursor: pointer;   
 }
+
+.container-drop .catego.active {
+    color: var(--Grayish-blue);
+} 
 
 .dropdown {
+    width: 130px;
     background-color: white;
     border-radius: 10px;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
-    z-index: 10;
-    width: 120px;
-    max-height: 40px;
-    overflow: hidden;
-    top: 0%;
     position: absolute;
-    opacity: 0%;
-    cursor: pointer;
-    transition: all 0.5s;
+    z-index: 1;
+    top: 40px;
+    display: none;
 }
 
-.dropdown:active {
-    opacity: 100%;
-    top:  calc(100% + 10px);
-    width: 200px;
-    max-height: 40rem;
-}
-
-.dropdown > div {
+.dropdown a {
     display: block;
-    margin: 5px 0px;
-    padding: 5px 15px;
-    font-size: 15px;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
     color: var(--Very-dark-blue);
 }
 
-
 .access {
     margin: 10px;
+    padding-left: 70px;
 }
 
 .access button {
@@ -142,6 +146,10 @@ header {
 .access .a02:hover {
     color: white;
     background-color: var(--Very-light-red);
+}
+
+.menu-mobile {
+    display: none;
 }
 
 .textintro {
@@ -247,6 +255,7 @@ main .titlemain {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
 }
 
 #containers02 {
@@ -326,7 +335,6 @@ footer {
     display: flex;
     height: auto;
     margin-top: 30px;
-    overflow: hidden;
 }
 
 footer .container {
@@ -334,6 +342,7 @@ footer .container {
     width: 100%;
     justify-content: center;
     padding: 30px;
+    
 }
 
 .end {
@@ -366,6 +375,71 @@ footer .container {
 }
 
 @media (max-width: 768px) {
+    .menu-mobile {
+        display: flex;
+        cursor: pointer;
+        padding: 10px;
+    }
+    .menu {
+      display: none;
+    }
+    .menu.open {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        background: white;
+        flex-direction: column;
+        border-radius: 10px;
+        width: 90vw;
+        height: auto;
+        position: absolute;
+        top: 100px;
+    }
+
+    .container-drop {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-drop .catego{
+        text-align: center;
+        color: var(--Very-dark-blue);
+        background-image: url(/images/icon-arrow-dark.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .dropdown {
+        background: var(--Grayish-blue);
+        border-radius: 8px;
+        width: 250px;
+        text-align: center;
+        position: relative;
+        margin: 5px;
+    }
+    .dropdown a:hover {
+        background: var(--Very-dark-grayish-blue);
+    }
+
+    .access {
+        padding-left: 0px;
+    }
+
+    .access > button {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .access .a01 {
+        color: var(--Very-dark-blue);
+    }
+
+    .access .a02 {
+        background: var(--Light-red);
+        color:white;
+    }
+
     #s01 {
         flex-direction: column-reverse;
         justify-content: center;
@@ -386,7 +460,7 @@ footer .container {
         flex-direction: column;
         justify-content: center;
         height: 400px;
-        padding-bottom: 300px;
+        padding-bottom: 350px;
         padding-top: 200px;
         border-radius: 0px 180px 0px 180px;
     }

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="css/style.css">
@@ -17,43 +18,51 @@
             <a class="navbar-brand" href="#">
               <img src="/images/logo.svg" alt="">
             </a>
-            <div class="container-drop">
-            <a href="#">Product <img src="/images/icon-arrow-light.svg" alt=""></a>
-             
-  
-              <div class="dropdown">
-                <div>Overview</div>
-                <div>Pricing</div>
-                <div>Marketplace</div>
-                <div>Features</div>
-                <div>Integrations</div>
-              </div>
-            </div>
+            
+            <div class="menu">
+              <div class="container-drop">
+                <span class="catego">Product <img src="/images/icon-arrow-light.svg" alt=""></span> 
+                 
+               <div class="dropdown">
+                 <a href="">Overview</a>
+                 <a href="">Pricing</a>
+                 <a href="">Marketplace</a>
+                 <a href="">Features</a>
+                 <a href="">Integrations</a>
+               </div>
+             </div>
+ 
+             <div class="container-drop">
+                 <span class="catego">Company <img src="/images/icon-arrow-light.svg" alt=""></span>
+   
+               <div class="dropdown">
+                 <a href="">About</a>
+                 <a href="">Team</a>
+                 <a href="">Blog</a>
+                 <a href="">Careers</a>
+               </div>
+             </div>
+ 
+             <div class="container-drop">
+                 <span class="catego">Contact <img src="/images/icon-arrow-light.svg" alt=""></span>
+       
+               <div class="dropdown">
+                 <a href="">Contact</a>
+                 <a href="">Newsletter</a>
+                 <a href="">LinkedIn</a>
+               </div>
+             </div>
 
-            <div class="container-drop">
-              <a href="#">Company <img src="/images/icon-arrow-light.svg" alt=""></a>
-  
-              <div class="dropdown">
-                <div>About</div>
-                <div>Team</div>
-                <div>Blog</div> 
-                <div>Careers</div>
-              </div>
-            </div>
-
-            <div class="container-drop">
-              <a href="#">Connect <img src="/images/icon-arrow-light.svg" alt=""></a>
-      
-              <div class="dropdown">
-                 <div>Contact</div>
-                 <div>Newsletter</div> 
-                 <div>LinkedIn</div>
-              </div>
-            </div>
-
-            <div class="access">
+              <div class="access">
                 <button class="a01">Login</button>
                 <button class="a02">Sign Up</button>
+              </div>
+            </div>
+
+          
+
+            <div class="menu-mobile" onclick="openMenu()">
+              <img src="/images/icon-hamburger.svg" alt="">
             </div>
           </nav>
 
@@ -72,7 +81,7 @@
   <main>
     <h2 class="titlemain">Designed for the future</h2>
      <section id="s01">
-        <div class="text01">
+        <div class="text01"  data-aos="zoom-in">
             <h3 id="tt">Introducing an extensible editor</h3>
     
             <p class="parag">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
@@ -85,16 +94,16 @@
               by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
          </div>
     
-         <div class="desktopimg"><img src="/images/illustration-editor-desktop.svg" alt=""></div>
+         <div class="desktopimg" data-aos="fade-up-left"><img src="/images/illustration-editor-desktop.svg" alt=""></div>
      </section>
 
      <section id="s02">
      <div class="container-fluid" id="containers02">
-      <div class="phoneimg">
+      <div class="phoneimg"  data-aos="flip-left">
         <img src="/images/illustration-phones.svg" alt="">
       </div>
 
-     <div class="text02" >
+     <div class="text02" data-aos="fade-left">
          <h3 id="tt2">State of the Art Infrastructure</h3>
          <p class="parag2">
            With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
@@ -106,8 +115,8 @@
 
      <section id="s03">
 
-        <div class="laptopimg"><img src="/images/illustration-laptop-desktop.svg" alt=""></div>
-        <div class="text03">
+        <div class="laptopimg" data-aos="flip-left"><img src="/images/illustration-laptop-desktop.svg" alt=""></div>
+        <div class="text03" data-aos="zoom-out-left">
             <h3 id="tt">Free, open, simple</h3>
     
             <p class="parag">Blogr is a free and open source application backed by a large community of helpful developers. It supports 
@@ -159,6 +168,11 @@
             </div>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init({duration: 2000,});
+  </script>
+  <script src="/js/script.js"></script>
 </body>
-<script src="/js/script.js"></script>
 </html>
