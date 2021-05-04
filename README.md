@@ -1,16 +1,17 @@
-<img src="assets/homepage.png">
+<img src="images/slide1.png">
 
 <h1 align="center">
-UI Clone #17 - Vercel (Homepage)
+BLOGR LANDING PAGE FRONTENDMENTOR - JUNIOR
 </h1>
 
-<p align="center"><a href="https://vercel.com">Vercel Homepage</a> UI clone for study purposes.</p>
+##SOBRE O DESAFIO
+ O objetivo é construir uma pagina mais parecida como desgin original e meus usuários devem ser capazes de:
 
-<p align="center">
-  <a href="https://github.com/rocketseat-content/youtube-clone-vercel-homepage/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/rocketseat-content/youtube-clone-vercel-homepage?color=%236633cc&logoColor=%236633cc&style=flat" alt="Contributors">
-  </a>
-</p>
+- Visualize o layout ideal para o site, dependendo do tamanho da tela do dispositivo
+- Veja os estados de foco para todos os elementos interativos na página.
+
+o maior desafio que tive foi ajustar o menu para versão mobile.
+estudei e achei a melhor solução que foi a Collapsible animation(CSS) e consegui um resultado satisfatorio podendo aplicar o que conheci.
 
 <hr>
 
@@ -23,7 +24,7 @@ UI Clone #17 - Vercel (Homepage)
 
 ## Resources
 
-- [x] HTML,CSS, JS
+- [x] HTML, CSS, JS
 - [x] SVG Images
 - [x] GOOGLE FONTS
-
+- [x] JQUERY CDN
