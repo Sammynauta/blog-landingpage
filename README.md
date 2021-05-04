@@ -4,7 +4,7 @@
 BLOGR LANDING PAGE FRONTENDMENTOR - JUNIOR
 </h1>
 
-##SOBRE O DESAFIO
+## SOBRE O DESAFIO
  O objetivo é construir uma pagina mais parecida como desgin original e meus usuários devem ser capazes de:
 
 - Visualize o layout ideal para o site, dependendo do tamanho da tela do dispositivo
